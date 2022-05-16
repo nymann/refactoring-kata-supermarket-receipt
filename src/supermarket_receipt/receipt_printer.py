@@ -1,10 +1,10 @@
-from model_objects import ProductUnit
+from supermarket_receipt.model_objects import ProductUnit
+
 
 class ReceiptPrinter:
-
     def __init__(self, columns=40):
         self.columns = columns
-  
+
     def print_receipt(self, receipt):
         result = ""
         for item in receipt.items:
@@ -43,7 +43,7 @@ class ReceiptPrinter:
         if ProductUnit.EACH == item.product.unit:
             return str(item.quantity)
         else:
-            return '%.3f' % item.quantity
+            return "%.3f" % item.quantity
 
     def print_discount(self, discount):
         name = f"{discount.description} ({discount.product.name})"

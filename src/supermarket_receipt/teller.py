@@ -1,9 +1,8 @@
-from model_objects import Offer
-from receipt import Receipt
+from supermarket_receipt.model_objects import Offer
+from supermarket_receipt.receipt import Receipt
 
 
 class Teller:
-
     def __init__(self, catalog):
         self.catalog = catalog
         self.offers = {}
